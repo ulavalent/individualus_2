@@ -88,8 +88,8 @@ struct CircularList::Implementation {
 
         Node* current = head;
         for (size_t i = 0; i < list_size; ++i) {
-            if (current->data == oldValue) {
-                current->data = newValue;
+            if (current->data == newValue) {
+                current->data = oldValue;
                 return;
             }
             current = current->next;
