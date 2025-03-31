@@ -22,6 +22,7 @@ private:
 public:
     CircularList();
     CircularList(const CircularList& other);
+    CircularList& operator=(const CircularList& other);
     ~CircularList();
 
     void add(int value);
@@ -29,7 +30,6 @@ public:
     void clear();
     void update(int oldValue, int newValue);
 
-    CircularList& operator=(const CircularList& other);
     CircularList& operator+=(int value);   
     CircularList& operator-=(int value);   
     bool operator==(const CircularList& other) const;

@@ -133,10 +133,6 @@ CircularList::CircularList(const CircularList& other) : impl(new Implementation(
     }
 }
 
-CircularList::~CircularList() {
-    delete impl;
-}
-
 CircularList& CircularList::operator=(const CircularList& other) {
     if (this == &other) return *this;
 
@@ -145,6 +141,10 @@ CircularList& CircularList::operator=(const CircularList& other) {
         impl->add(other[i]);
     }
     return *this;
+}
+
+CircularList::~CircularList() {
+    delete impl;
 }
 
 CircularList& CircularList::operator+=(int value) {

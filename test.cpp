@@ -15,7 +15,7 @@ void testAddAndSize(ofstream &logfile) {
     CircularList list;
     list += 5;
     list += 10;
-    bool passed = (list.size() == 3);
+    bool passed = (list.size() == 2);
     log_result(logfile, "testAddAndSize", passed);
 }
 
@@ -24,7 +24,7 @@ void testRemove(ofstream &logfile) {
     list += 5;
     list += 10;
     list -= 5;
-    bool passed = (list.size() == 0);
+    bool passed = (list.size() == 1);
     log_result(logfile, "testRemove", passed);
 }
 
@@ -32,7 +32,7 @@ void testUpdate(ofstream &logfile) {
     CircularList list;
     list += 5;
     list.update(5, 15);
-    bool passed = list.contains(20);
+    bool passed = list.contains(15);
     log_result(logfile, "testUpdate", passed);
 }
 
